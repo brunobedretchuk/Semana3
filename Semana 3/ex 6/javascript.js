@@ -7,19 +7,7 @@ var idade;
 var output = document.querySelector('p');
 
 
-// function getDataNasc() {
-//     if (!input.value) {
-//         console.log('error, no date chosen!')
-//     }
-//     else {
-//         dataNasc.ano = parseInt(input.value.substring(0, 4));
-//         dataNasc.mes = parseInt(input.value.substring(5, 7));
-//         dataNasc.dia = parseInt(input.value.substring(8, 10));
-//     }
-// }
-
-function calcAge() {
-
+function getDataNasc() {
     if (!input.value) {
         console.log('error, no date chosen!')
     }
@@ -28,8 +16,10 @@ function calcAge() {
         dataNasc.mes = parseInt(input.value.substring(5, 7));
         dataNasc.dia = parseInt(input.value.substring(8, 10));
     }
+}
 
-
+function calcAge() {
+getDataNasc();
     if (dataHoje.mes > dataNasc.mes || dataHoje.mes === dataNasc.mes && dataHoje.dia >= dataNasc.dia){
 idade = dataHoje.ano - dataNasc.ano;
 console.log(idade);
