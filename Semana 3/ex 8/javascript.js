@@ -23,7 +23,7 @@ function showList() {
         }
         allRemoves = document.querySelectorAll('.remove');
         for (let j = 0 ; j<allRemoves.length ; j++){
-            allRemoves[j].addEventListener('click' , function() {list.splice(j , 1); showList();});
+            allRemoves[j].addEventListener('click' , function() {eraseItem(j)});
         }
     }
 
@@ -64,10 +64,10 @@ function checkRepetido() {
 }
 }
 
-// function eraseItem(j) {
-//     list.splice(j , 1);
-//     showList();
-// }
+function eraseItem(p) {
+    list.splice(p , 1);
+    showList();
+}
 
 addButton.addEventListener('click' , addToList);
 input.addEventListener('keyup' , function(event) {
